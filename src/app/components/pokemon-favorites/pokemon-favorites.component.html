@@ -1,0 +1,32 @@
+<h2 class="container">Pokemon Favorites</h2>
+
+<div class="container list">
+  @if (!isLoading()) {
+    @for(pokemon of favoritePokemons(); track pokemon.id) {
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>{{pokemon.name}}</mat-card-title>
+          <mat-card-subtitle>#{{pokemon.id}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="pokemon.image.hires" alt="Photo of pokemon">
+        <mat-card-content>
+          <div class="types">
+            @for (type of pokemon.types; track $index) {
+            <mat-chip class="type {{type}}">
+              {{type}}
+            </mat-chip>
+            }
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>MORE</button>
+        </mat-card-actions>
+      </mat-card>
+      } @empty {
+        <p>Não há resultados</p>
+      }
+  } @else {
+    <p>Carregando...</p>
+  }
+
+</div>

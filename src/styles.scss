@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+  width: 1150px;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (max-width: 1200px)  { width: 850px; }
+  @media (max-width: 900px)   { width: 550px; }
+  @media (max-width: 600px)   { 
+    width: 100%; 
+    padding: 0 20px;
+  }
+
+  &.flex {
+    display: flex;
+    align-items: center;
+  }
+}

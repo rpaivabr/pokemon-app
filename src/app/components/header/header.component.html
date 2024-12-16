@@ -1,0 +1,10 @@
+<mat-toolbar>
+  <div class="container flex">
+    <span (click)="navigate.emit('pokemon-list')">My Pokemon App</span>
+    <span class="spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon [matBadge]="favoritesCount()" [matBadgeHidden]="!favoritesCount()"
+        (click)="navigate.emit('pokemon-favorites')">favorite</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

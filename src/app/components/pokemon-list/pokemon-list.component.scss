@@ -1,0 +1,54 @@
+h2 {
+  margin-top: 20px;
+}
+
+.list {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+mat-card {
+  min-width: 250px;
+  // @media (max-width: 600px) { width: 100%; }
+
+  img {
+    height: 150px;
+    padding: 20px;
+    object-fit: contain;
+  }
+
+  mat-card-actions {
+    justify-content: flex-end;
+  }
+
+  .types {
+    display: flex;
+    gap: 5px;
+
+    mat-chip {
+      --mdc-chip-label-text-color: #fff;
+
+      &.Normal { background-color: #9FA19F }
+      &.Fighting { background-color: #FF8000 }
+      &.Flying { background-color: #81B9EF }
+      &.Poison { background-color: #9141CB }
+      &.Ground { background-color: #915121 }
+      &.Rock { background-color: #AFA981 }
+      &.Bug { background-color: #91A119 }
+      &.Ghost { background-color: #704170 }
+      &.Steel { background-color: #60A1B8 }
+      &.Fire { background-color: #E62829 }
+      &.Water { background-color: #2980EF }
+      &.Grass { background-color: #3FA129 }
+      &.Electric { background-color: #FAC000 }
+      &.Psychic { background-color: #EF4179 }
+      &.Ice { background-color: #3DCEF3 }
+      &.Dragon { background-color: #5060E1 }
+      &.Dark { background-color: #624D4E }
+      &.Fairy { background-color: #EF70EF }
+    }
+  }
+}
